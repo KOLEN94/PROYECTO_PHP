@@ -36,8 +36,8 @@
 
       $routerContainer = new RouterContainer();
       $map = $routerContainer->getMap();
-      $map->get('index', '/', '../');
-      $map->get('addJobs', '/jobs/add', '../addJob.php');
+      $map->get('index', '/Proyecto_PHP/', '../');
+      $map->get('addJobs', '/Proyecto_PHP/jobs/add', '../addJob.php');
 
       $matcher = $routerContainer->getMatcher();
       $route = $matcher->match($request);
@@ -46,4 +46,3 @@
       } else {
         require $route->handler;
       }
-      var_dump($route);
